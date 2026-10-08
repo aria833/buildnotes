@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo網誌框架 | 套用客製化主題 (Themes) | Aria 的開發筆記</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="學習大綱 (Lab Overview) 學習單編號：hexo-002學習目標：學會如何在 Hexo 官網挑選主題、正確下載主題套件，並修改全域設定檔以套用新主題   需要工具：已經建立好的 Hexo 環境、Git、瀏覽器 核心步驟： 挑選並評估 Hexo 主題 下載主題檔案至 themes&#x2F; 目錄 修改全域設定檔 清除快取並開啟伺服器預覽     實作步驟 (Lab Steps)Step 1：挑選">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo網誌框架 | 套用客製化主題 (Themes)">
+<meta property="og:url" content="http://buildnotes.aria-carrotlab.com/2026/10/08/hexo-002/index.html">
+<meta property="og:site_name" content="Aria 的開發筆記">
+<meta property="og:description" content="學習大綱 (Lab Overview) 學習單編號：hexo-002學習目標：學會如何在 Hexo 官網挑選主題、正確下載主題套件，並修改全域設定檔以套用新主題   需要工具：已經建立好的 Hexo 環境、Git、瀏覽器 核心步驟： 挑選並評估 Hexo 主題 下載主題檔案至 themes&#x2F; 目錄 修改全域設定檔 清除快取並開啟伺服器預覽     實作步驟 (Lab Steps)Step 1：挑選">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2026-10-08T12:06:40.000Z">
+<meta property="article:modified_time" content="2026-10-08T15:10:40.534Z">
+<meta property="article:author" content="Aria">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="部落格">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Aria 的開發筆記" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Aria 的開發筆記</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">學習、整理與累積</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">首頁</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/about">關於我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜尋"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜尋"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://buildnotes.aria-carrotlab.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-hexo-002" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/10/08/hexo-002/" class="article-date">
+  <time class="dt-published" datetime="2026-10-08T12:06:40.000Z" itemprop="datePublished">2026-10-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hexo網誌框架 | 套用客製化主題 (Themes)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="學習大綱-Lab-Overview"><a href="#學習大綱-Lab-Overview" class="headerlink" title="學習大綱 (Lab Overview)"></a>學習大綱 (Lab Overview)</h2><blockquote>
+<p>學習單編號：hexo-002<br>學習目標：學會如何在 Hexo 官網挑選主題、正確下載主題套件，並修改全域設定檔以套用新主題</p>
+</blockquote>
+<ul>
+<li>需要工具：已經建立好的 Hexo 環境、Git、瀏覽器</li>
+<li>核心步驟：<ol>
+<li>挑選並評估 Hexo 主題</li>
+<li>下載主題檔案至 <code>themes/</code> 目錄</li>
+<li>修改全域設定檔</li>
+<li>清除快取並開啟伺服器預覽</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="實作步驟-Lab-Steps"><a href="#實作步驟-Lab-Steps" class="headerlink" title="實作步驟 (Lab Steps)"></a>實作步驟 (Lab Steps)</h2><h3 id="Step-1：挑選並評估-Hexo-主題"><a href="#Step-1：挑選並評估-Hexo-主題" class="headerlink" title="Step 1：挑選並評估 Hexo 主題"></a>Step 1：挑選並評估 Hexo 主題</h3><ol>
+<li>開啟 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo官網的主題頁面(Themes)</a></li>
+<li>瀏覽各個主題，點擊感興趣的主題進入其 GitHub 專案裡面</li>
+<li>評估指標<ul>
+<li>GitHub Stars 數：代表熱門度與社群認可度</li>
+<li>最後更新時間：若超過一年未更新，未來可能會有套件不相容的問題</li>
+<li>README 文件完整度：確認是否有詳細的安裝說明與客製化設定範例</li>
+</ul>
+</li>
+</ol>
+<h3 id="Step-2：安裝主題檔"><a href="#Step-2：安裝主題檔" class="headerlink" title="Step 2：安裝主題檔"></a>Step 2：安裝主題檔</h3><p>根據該主題 README 的指引進行安裝，常見安裝方式有兩種：</p>
+<ul>
+<li>方法 1：使用Git Clone （最常見）<br>在 Hexo 根目錄下執行指定</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/username/hexo-theme-example.git themes/example</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方法 2：使用 npm&#x2F;yarn 安裝（部分主題支援）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-example --save</span><br></pre></td></tr></table></figure>
+
+<p>安裝完成後，打開專案下的 <code>theme/</code> 資料夾，會看到多出一個對應主題名稱的資料夾（例如 <code>themes/example</code>）</p>
+<h3 id="Step-3：修改全域設定檔"><a href="#Step-3：修改全域設定檔" class="headerlink" title="Step 3：修改全域設定檔"></a>Step 3：修改全域設定檔</h3><ol>
+<li>開啟 Hexo 根目錄下的 <code>_config.yml</code></li>
+<li>找到 <code>#Extensions</code> 區塊（約在第 100 行左右）</li>
+<li>將 <code>theme</code> 欄位的值修改為剛下載的主題資料夾名稱</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: example  # 填入 themes/ 底下的資料夾名稱</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-4：清除快取並開啟伺服器預覽"><a href="#Step-4：清除快取並開啟伺服器預覽" class="headerlink" title="Step 4：清除快取並開啟伺服器預覽"></a>Step 4：清除快取並開啟伺服器預覽</h3><p>切換主題後，必須清除舊主題產生的快取</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>開啟 <code>http://localhost:4000/</code> ，即可看到全新主題效果。</p>
+<hr>
+<h2 id="知識小卡（Key-Takeaways）"><a href="#知識小卡（Key-Takeaways）" class="headerlink" title="知識小卡（Key Takeaways）"></a>知識小卡（Key Takeaways）</h2><blockquote>
+<p>切換主題標準SOP：安裝主題 → 修改根目錄 <code>_config.yml</code> 的 <code>theme</code> 欄位 → hexo clean → hexo server</p>
+</blockquote>
+<blockquote>
+<p>設定檔的不同：<br><strong>全域設定檔</strong> (<code>/_config.yml</code>)：負責網站整體資訊、網址、部署與指定套用哪個主題<br><strong>主題設定檔</strong> (<code>/themes/主題名稱/_config.yml</code>)：負責該主題專屬的樣式、選單列、社群連結與側邊欄設定</p>
+</blockquote>
+<hr>
+<h2 id="學習單（Lab-Sheet）"><a href="#學習單（Lab-Sheet）" class="headerlink" title="學習單（Lab Sheet）"></a>學習單（Lab Sheet）</h2><ol>
+<li>哪些是選擇主題時需要注意的指標？<br>(1) 上次更新時間<br>(2) 作者發表的專案數量<br>(3) 星星數</li>
+<li>修改根目錄的 <code>_config.yml</code> 套用新主題後，如果畫面沒有改變，可以先執行什麼指定，再開啟server？<br>(1) <code>hexo new</code><br>(2) <code>hexo clean</code><br>(3) <code>霹靂卡霹靂拉拉</code><br>(4) <code>解除封印</code></li>
+</ol>
+<details>
+<summary>查看解答</summary>
+1. 上次更新時間、星星數
+2. `hexo clean`
+</details>
+
+<hr>
+<h3 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h3><ul>
+<li><a href="">Hexo網誌框架 | 建立個人靜態部落格與 GitHub Pages 部署</a></li>
+</ul>
+<hr>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo官方主題庫(Themes)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hexschool.com/">六角學院影音課程-Hexo部落格架站教學</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://buildnotes.aria-carrotlab.com/2026/10/08/hexo-002/" data-id="cuidOXm1OXg3QaxQHa5NOJSbc" data-title="Hexo網誌框架 | 套用客製化主題 (Themes)" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" rel="tag">部落格</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2026/10/09/md-001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Markdown | 基礎語法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2026/10/07/hexo-001/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo網誌框架 | 建立個人靜態部落格與 GitHub Pages 部署</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E8%A1%93%E5%AF%AB%E4%BD%9C/" rel="tag">技術寫作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" rel="tag">部落格</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">標籤雲</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E6%8A%80%E8%A1%93%E5%AF%AB%E4%BD%9C/" style="font-size: 10px;">技術寫作</a> <a href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" style="font-size: 20px;">部落格</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">彙整</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/10/">十月 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2026/10/09/md-001/">Markdown | 基礎語法</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/08/hexo-002/">Hexo網誌框架 | 套用客製化主題 (Themes)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/07/hexo-001/">Hexo網誌框架 | 建立個人靜態部落格與 GitHub Pages 部署</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/07/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Aria<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/about" class="mobile-nav-link">關於我</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

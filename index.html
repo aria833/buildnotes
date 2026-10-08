@@ -82,8 +82,8 @@
   
     <article id="post-md-001" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2026/10/08/md-001/" class="article-date">
-  <time class="dt-published" datetime="2026-10-08T04:22:51.000Z" itemprop="datePublished">2026-10-08</time>
+    <a href="/2026/10/09/md-001/" class="article-date">
+  <time class="dt-published" datetime="2026-10-09T04:22:51.000Z" itemprop="datePublished">2026-10-09</time>
 </a>
     
   </div>
@@ -94,7 +94,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2026/10/08/md-001/">Markdown | 基礎語法</a>
+      <a class="p-name article-title" href="/2026/10/09/md-001/">Markdown | 基礎語法</a>
     </h1>
   
 
@@ -106,11 +106,125 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://buildnotes.aria-carrotlab.com/2026/10/08/md-001/" data-id="cuid_K7xZbDITAdvPBpWPByKk" data-title="Markdown | 基礎語法" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://buildnotes.aria-carrotlab.com/2026/10/09/md-001/" data-id="cuidSs5lJYkW144parhUxDUSa" data-title="Markdown | 基礎語法" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E8%A1%93%E5%AF%AB%E4%BD%9C/" rel="tag">技術寫作</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-hexo-002" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2026/10/08/hexo-002/" class="article-date">
+  <time class="dt-published" datetime="2026-10-08T12:06:40.000Z" itemprop="datePublished">2026-10-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2026/10/08/hexo-002/">Hexo網誌框架 | 套用客製化主題 (Themes)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="學習大綱-Lab-Overview"><a href="#學習大綱-Lab-Overview" class="headerlink" title="學習大綱 (Lab Overview)"></a>學習大綱 (Lab Overview)</h2><blockquote>
+<p>學習單編號：hexo-002<br>學習目標：學會如何在 Hexo 官網挑選主題、正確下載主題套件，並修改全域設定檔以套用新主題</p>
+</blockquote>
+<ul>
+<li>需要工具：已經建立好的 Hexo 環境、Git、瀏覽器</li>
+<li>核心步驟：<ol>
+<li>挑選並評估 Hexo 主題</li>
+<li>下載主題檔案至 <code>themes/</code> 目錄</li>
+<li>修改全域設定檔</li>
+<li>清除快取並開啟伺服器預覽</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="實作步驟-Lab-Steps"><a href="#實作步驟-Lab-Steps" class="headerlink" title="實作步驟 (Lab Steps)"></a>實作步驟 (Lab Steps)</h2><h3 id="Step-1：挑選並評估-Hexo-主題"><a href="#Step-1：挑選並評估-Hexo-主題" class="headerlink" title="Step 1：挑選並評估 Hexo 主題"></a>Step 1：挑選並評估 Hexo 主題</h3><ol>
+<li>開啟 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo官網的主題頁面(Themes)</a></li>
+<li>瀏覽各個主題，點擊感興趣的主題進入其 GitHub 專案裡面</li>
+<li>評估指標<ul>
+<li>GitHub Stars 數：代表熱門度與社群認可度</li>
+<li>最後更新時間：若超過一年未更新，未來可能會有套件不相容的問題</li>
+<li>README 文件完整度：確認是否有詳細的安裝說明與客製化設定範例</li>
+</ul>
+</li>
+</ol>
+<h3 id="Step-2：安裝主題檔"><a href="#Step-2：安裝主題檔" class="headerlink" title="Step 2：安裝主題檔"></a>Step 2：安裝主題檔</h3><p>根據該主題 README 的指引進行安裝，常見安裝方式有兩種：</p>
+<ul>
+<li>方法 1：使用Git Clone （最常見）<br>在 Hexo 根目錄下執行指定</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/username/hexo-theme-example.git themes/example</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>方法 2：使用 npm&#x2F;yarn 安裝（部分主題支援）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-theme-example --save</span><br></pre></td></tr></table></figure>
+
+<p>安裝完成後，打開專案下的 <code>theme/</code> 資料夾，會看到多出一個對應主題名稱的資料夾（例如 <code>themes/example</code>）</p>
+<h3 id="Step-3：修改全域設定檔"><a href="#Step-3：修改全域設定檔" class="headerlink" title="Step 3：修改全域設定檔"></a>Step 3：修改全域設定檔</h3><ol>
+<li>開啟 Hexo 根目錄下的 <code>_config.yml</code></li>
+<li>找到 <code>#Extensions</code> 區塊（約在第 100 行左右）</li>
+<li>將 <code>theme</code> 欄位的值修改為剛下載的主題資料夾名稱</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: example  # 填入 themes/ 底下的資料夾名稱</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-4：清除快取並開啟伺服器預覽"><a href="#Step-4：清除快取並開啟伺服器預覽" class="headerlink" title="Step 4：清除快取並開啟伺服器預覽"></a>Step 4：清除快取並開啟伺服器預覽</h3><p>切換主題後，必須清除舊主題產生的快取</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>開啟 <code>http://localhost:4000/</code> ，即可看到全新主題效果。</p>
+<hr>
+<h2 id="知識小卡（Key-Takeaways）"><a href="#知識小卡（Key-Takeaways）" class="headerlink" title="知識小卡（Key Takeaways）"></a>知識小卡（Key Takeaways）</h2><blockquote>
+<p>切換主題標準SOP：安裝主題 → 修改根目錄 <code>_config.yml</code> 的 <code>theme</code> 欄位 → hexo clean → hexo server</p>
+</blockquote>
+<blockquote>
+<p>設定檔的不同：<br><strong>全域設定檔</strong> (<code>/_config.yml</code>)：負責網站整體資訊、網址、部署與指定套用哪個主題<br><strong>主題設定檔</strong> (<code>/themes/主題名稱/_config.yml</code>)：負責該主題專屬的樣式、選單列、社群連結與側邊欄設定</p>
+</blockquote>
+<hr>
+<h2 id="學習單（Lab-Sheet）"><a href="#學習單（Lab-Sheet）" class="headerlink" title="學習單（Lab Sheet）"></a>學習單（Lab Sheet）</h2><ol>
+<li>哪些是選擇主題時需要注意的指標？<br>(1) 上次更新時間<br>(2) 作者發表的專案數量<br>(3) 星星數</li>
+<li>修改根目錄的 <code>_config.yml</code> 套用新主題後，如果畫面沒有改變，可以先執行什麼指定，再開啟server？<br>(1) <code>hexo new</code><br>(2) <code>hexo clean</code><br>(3) <code>霹靂卡霹靂拉拉</code><br>(4) <code>解除封印</code></li>
+</ol>
+<details>
+<summary>查看解答</summary>
+1. 上次更新時間、星星數
+2. `hexo clean`
+</details>
+
+<hr>
+<h3 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h3><ul>
+<li><a href="">Hexo網誌框架 | 建立個人靜態部落格與 GitHub Pages 部署</a></li>
+</ul>
+<hr>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo官方主題庫(Themes)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hexschool.com/">六角學院影音課程-Hexo部落格架站教學</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://buildnotes.aria-carrotlab.com/2026/10/08/hexo-002/" data-id="cuidOXm1OXg3QaxQHa5NOJSbc" data-title="Hexo網誌框架 | 套用客製化主題 (Themes)" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" rel="tag">部落格</a></li></ul>
 
     </footer>
   </div>
@@ -134,7 +248,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2026/10/07/hexo-001/">Hexo網誌框架 | 架站</a>
+      <a class="p-name article-title" href="/2026/10/07/hexo-001/">Hexo網誌框架 | 建立個人靜態部落格與 GitHub Pages 部署</a>
     </h1>
   
 
@@ -142,142 +256,121 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <details>
-<summary>學習單</summary>
-1. hexo是靜態？動態？擬態?
-
-</details>
-
+        <h2 id="學習大綱-Lab-Overview"><a href="#學習大綱-Lab-Overview" class="headerlink" title="學習大綱 (Lab Overview)"></a>學習大綱 (Lab Overview)</h2><blockquote>
+<p>學習單編號：hexo-001<br>學習目標：理解靜態部落格原理，使用 Hexo 建立網站環境，並部署至 GitHub Pages 與設定自訂網域</p>
+</blockquote>
+<ul>
+<li>需要工具：Node.js (建議 LTS 版本)、npm、Git、GitHub 帳號、瀏覽器</li>
+<li>核心步驟：<ol>
+<li>安裝環境與 Hexo CLI</li>
+<li>初始化部落格環境 (<code>hexo init</code>)</li>
+<li>修改全域設定檔客製化網站</li>
+<li>編譯並部署至 GitHub Pages</li>
+<li>延伸操作：新增文章、頁面與設定個人網域</li>
+</ol>
+</li>
+</ul>
 <hr>
-<p>學習單編號：hexo-001</p>
-<ol>
-<li><p>目的：建立個人靜態部落格</p>
+<h2 id="實作步驟-Lab-Steps"><a href="#實作步驟-Lab-Steps" class="headerlink" title="實作步驟 (Lab Steps)"></a>實作步驟 (Lab Steps)</h2><h3 id="Step-1：安裝-Node-js、Git-與-Hexo"><a href="#Step-1：安裝-Node-js、Git-與-Hexo" class="headerlink" title="Step 1：安裝 Node.js、Git 與 Hexo"></a>Step 1：安裝 Node.js、Git 與 Hexo</h3><ol>
+<li><p>到 <a target="_blank" rel="noopener" href="https://nodejs.org/zh-tw">Node.js官網</a> 下載安裝 LTS 版本。安裝好後開啟終端機輸入 <code>node -v</code> 與 <code>npm -v</code> 檢查版本。</p>
 </li>
-<li><p>需要：node.js, npm, git</p>
+<li><p>到 <a target="_blank" rel="noopener" href="https://git-scm.com/">Git官網</a> 下載安裝，開啟終端機輸入 <code>git -v</code> 檢查版本。</p>
 </li>
-<li><p>步驟：<br>(1) 安裝node, git<br>(2) 使用npm安裝hexo<br>(3) 建立部落格環境：<code>hexo init 網站名稱（英文）</code><br>(4) 開啟部落格：<code>hexo server</code><br>(5) 修改 <strong>config.yml</strong> 客製化網站描述<br>(6) 編譯 <code>hexo generate</code><br>(7) 部署到github pages</p>
-</li>
-<li><p>延伸學習<br>(1) 新增文章：<code>hexo new &#39;文章標題&#39;</code><br>(2) 修改內容沒有正確跑出來：<code>hexo clean</code>清除暫存檔<br>(3) 新增獨立頁面：<code>hexo new page 頁面名稱（英文）</code></p>
+<li><p>全域安裝 Hexo：<code>npm install -g hexo-cli</code>，完成後可輸入 <code>hexo -v</code> 驗證。<br><code>-g</code> 表示安裝在全電腦環境，非特定資料夾。</p>
 </li>
 </ol>
-<hr>
-<h2 id="實作"><a href="#實作" class="headerlink" title="實作"></a>實作</h2><ol>
-<li>到 <a target="_blank" rel="noopener" href="https://nodejs.org/zh-tw">node官網</a> 安裝，建議選擇LTS(穩定版本)。安裝好之後，可以開啟終端機輸入<code>node -v</code>，如果有跑出版本號，代表安裝成功；安裝node.js的時候，npm也會一併安裝，輸入<code>npm -v</code>，檢查npm版本。</li>
-<li>到 <a target="_blank" rel="noopener" href="https://git-scm.com/">git官網</a> 安裝，安裝好之後，可以開啟終端機輸入<code>git -v</code>，如果有跑出版本號，代表安裝成功。</li>
-<li>使用指令 <code>npm install -g hexo-cli</code>，安裝hexo。安裝好之後，可以使用指令 <code>hexo -v</code>，如果有跑出版本號，代表安裝成功。<br><code>-g</code> ：表示裝在整個電腦上，不是特定的資料夾</li>
-<li>在要建立網站的位置，建立hexo網站，確認終端機目前的位置是要建立資料夾的位置後，<code>hexo init 網站名稱（英文）</code></li>
+<h4 id="Step-2：建立並開啟-Hexo-部落格環境"><a href="#Step-2：建立並開啟-Hexo-部落格環境" class="headerlink" title="Step 2：建立並開啟 Hexo 部落格環境&#96;"></a>Step 2：建立並開啟 Hexo 部落格環境&#96;</h4><ol>
+<li>到目標資料夾位置開啟終端機，執行初始化指令：<code>hexo init 網站名稱（英文）</code></li>
+<li>使用 <code>hexo server</code> 開啟預覽，前往 <code>http://localhost:4000/</code> 確認畫面正常。</li>
+<li>在終端機按 <code>Ctrl + C</code> 關閉伺服器。</li>
+<li>認識目錄結構：</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Aria-CarrotBook-Air ~ % hexo init buildnotes</span><br><span class="line">INFO  Cloning hexo-starter https://github.com/hexojs/hexo-starter.git</span><br><span class="line">INFO  Install dependencies</span><br><span class="line">INFO  Start blogging with Hexo!</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>node_modules/</code>: 套件存放區</li>
+<li><code>scaffolds/</code>: 文章預設模板</li>
+<li><code>source/</code>: 文章與靜態檔案 (<code>_posts/</code>)</li>
+<li><code>themes/</code>: 主題樣式</li>
+<li><code>_config.yml</code>: 全域設定檔</li>
+</ul>
+<h3 id="Step-3：修改全域設定檔-config-yml"><a href="#Step-3：修改全域設定檔-config-yml" class="headerlink" title="Step 3：修改全域設定檔 _config.yml"></a>Step 3：修改全域設定檔 <code>_config.yml</code></h3><p>開啟根目錄下的 <code>_config.yml</code>，修改 <code># Site</code> 內容符合個人需求：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Aria 的開發筆記</span><br><span class="line">subtitle: &quot;學習、整理與累積&quot;</span><br><span class="line">description: &quot;記錄在程式、UI/UX、產品設計與 AI 領域的學習筆記。&quot;</span><br><span class="line">keywords: 前端,JavaScript,UI/UX,AI,學習筆記</span><br><span class="line">author: Aria</span><br><span class="line">language: zh-TW</span><br><span class="line">timezone: &quot;&quot;</span><br></pre></td></tr></table></figure>
 
-<p>打開資料夾後，會出現hexo預設的部落格環境<br><img src="/" alt="照片：hexo預設的部落格環境"></p>
+<h3 id="Step-4：編譯與部署到-GitHub-Pages"><a href="#Step-4：編譯與部署到-GitHub-Pages" class="headerlink" title="Step 4：編譯與部署到 GitHub Pages"></a>Step 4：編譯與部署到 GitHub Pages</h3><ol>
+<li>編譯為靜態網頁：<code>hexo generate</code>（會跑出 <code>public</code> 資料夾）。</li>
+<li>到 GitHub 開放一個全新的 Repository，並複製專案網址。</li>
+<li>安裝部署套件：<code>npm install hexo-deployer-git --save</code></li>
+<li>修改 <code>_config.yml</code> 的 <code>url</code> 與 <code>deploy</code> 設定：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">url: https://&lt;username&gt;.github.io/&lt;project&gt;</span><br><span class="line"></span><br><span class="line"># Deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/&lt;username&gt;/&lt;project&gt;</span><br><span class="line">  branch: gh-pages</span><br></pre></td></tr></table></figure>
+
 <ol start="5">
-<li>使用<code>hexo server</code>打開部落格，如果有出現這樣的畫面就表示環境有建立成功，確認成功後，輸入<code>ctrl+c</code>關閉server</li>
+<li>執行部署指令：</li>
 </ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Aria-CarrotBook-Air buildnotes % hexo server</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/ . Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p><img src="/" alt="照片：預設的部落格環境開啟的樣子"></p>
 <ol start="6">
-<li><p>認識目錄結構<br>node_modules: 安裝的套件<br>scaffolds: 部落格的暫存格式<br>source: 文章存放區<br>themes: 樣式<br>_config.yml: 全域設定檔<br>.gitignore: 忽略清單<br>package.json: hexo指令、版本、套件等資訊</p>
+<li>前往 GitHub &gt; Repository &gt; Settings &gt; Pages，確認選單的分支並查看網站。</li>
+</ol>
+<hr>
+<h2 id="延伸學習與踩坑紀錄"><a href="#延伸學習與踩坑紀錄" class="headerlink" title="延伸學習與踩坑紀錄"></a>延伸學習與踩坑紀錄</h2><ul>
+<li><p><strong>新增文章</strong>：<code>hexo new &#39;文章標題&#39;</code>（檔案出現在 <code>source/_posts/</code>）</p>
 </li>
-<li><p>調整全域設定檔 <strong>_config.yml</strong></p>
+<li><p><strong>修改內容沒出來</strong>：使用 <code>hexo clean</code> 清除暫存檔後再重跑 <code>hexo server</code></p>
 </li>
-</ol>
-<p>可以修改 <code>#Site</code> 裡面的部落格描述，符合個人需求</p>
-<table>
-<thead>
-<tr>
-<th>項目</th>
-<th>內容</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>title</td>
-<td>網站標題</td>
-</tr>
-<tr>
-<td>subtitle</td>
-<td>網站副標題</td>
-</tr>
-<tr>
-<td>description</td>
-<td>網站描述</td>
-</tr>
-<tr>
-<td>keywords</td>
-<td>關鍵字</td>
-</tr>
-<tr>
-<td>author</td>
-<td>作者</td>
-</tr>
-<tr>
-<td>language</td>
-<td>語言，預設為英文</td>
-</tr>
-<tr>
-<td>timezone</td>
-<td>時區，預設使用電腦的時區</td>
-</tr>
-</tbody></table>
-<p>修改範例</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Aria 的開發筆記</span><br><span class="line">subtitle: &quot;學習、整理與累積&quot;</span><br><span class="line">description: &quot;記錄在程式、UI/UX、產品設計與 AI 領域的學習筆記，整理所學並持續累積自己的知識。&quot;</span><br><span class="line">keywords: 前端,JavaScript,UI/UX,產品設計,產品開發,AI,學習筆記</span><br><span class="line">author: Aria</span><br><span class="line">language: zh-TW</span><br><span class="line">timezone: &quot;&quot;</span><br></pre></td></tr></table></figure>
-
-<p>可參考 <a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/configuration">Hexo官方-配置</a></p>
-<ol start="8">
-<li>編譯出網頁看得懂的格式：<code>hexo generate</code></li>
-</ol>
-<p>會出現一個public資料夾</p>
-<p><img src="/" alt="照片：編譯後出現的public資料夾"></p>
-<ol start="9">
-<li>部署到github pages<br>(1) 首先到github開一個新的repository，並把https開頭的網址記下來<br>(2) 安裝hexo-deployer-git，<code>npm install hexo-deployer-git --save</code><br>(3) 修改 <strong>_config.yml</strong> 第15行的url，將<username>改成自己的github帳號，<code>&lt;project&gt;</code> 是你的repository名稱</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># URL</span><br><span class="line">## Set your site url here. For example, if you use GitHub Page, set url as &#x27;https://username.github.io/project&#x27;</span><br><span class="line">url: https://&lt;username&gt;.github.io/project</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line">pretty_urls:</span><br><span class="line">  trailing_index: true # Set to false to remove trailing &#x27;index.html&#x27; from permalinks</span><br><span class="line">  trailing_html: true # Set to false to remove trailing &#x27;.html&#x27; from permalinks</span><br></pre></td></tr></table></figure>
-
-<p>(4) 修改**_config.yml**的deploy部分，替換成以下內容，並將 <code>&lt;username&gt;</code> 改為自己的github帳號，<code>&lt;project&gt;</code> 是你的repository名稱；branch是指要部署到的分支，可以視需求更改<br><code>    deploy:     type: git     repo: https://github.com/&lt;username&gt;/&lt;project&gt;     # example, https://github.com/hexojs/hexojs.github.io     branch: gh-pages    </code></p>
-<pre><code>**雖然 `deploy:` 看起來都一樣，但我有試過保留原本的deploy:，只把下面的地方換掉，但是會出錯，所以還是建議整段清空再貼上官方的字串會比較好**
-</code></pre>
-<p>(5)執行hexo clean<br>(6)執行hexo deploy<br>(7) 到github&gt;repository名稱&gt;settings&gt;pages，開啟網址確認</p>
-<p>參考資料：<a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/github-pages#%E4%B8%80%E9%8D%B5%E9%83%A8%E5%B1%AC">Hexo官方-一鍵部署</a></p>
-<hr>
-<p>新增文章<br>輸入 <code>hexo new &#39;文章標題&#39;</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Aria-CarrotBook-Air buildnotes % hexo new &#x27;文章標題&#x27;</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: ~/Desktop/buildnotes/source/_posts/文章標題.md</span><br></pre></td></tr></table></figure>
-
-<p>會出現在source&gt;_posts裡面，也可以使用hexo server開啟，確認有沒有出現新的文章<br><img src="/" alt="照片：確認新增新文章"></p>
-<p><em>記得使用 <code>ctrl+c</code> 關閉server</em></p>
-<hr>
-<p>使用 <code>hexo clean</code> 清空暫存檔，再重新執行<code>hexo server</code></p>
-<hr>
-<p>新增獨立的頁面：<code>hexo new page 頁面名稱</code><br>新的頁面會出現在source<br>像範例是新增一個about頁面，所以source的資料夾下面多出了一個about資料夾</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Aria-CarrotBook-Air buildnotes % hexo new page about</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Created: ~/Desktop/buildnotes/source/about/index.md</span><br></pre></td></tr></table></figure>
-
-<p><img src="/" alt="照片：新頁面資料夾"></p>
-<p>可以使用<code>hexo server</code>，並在網址加上後方加上about，就可以確認是否有開啟新的頁面</p>
-<p><img src="/" alt="照片：新頁面開啟畫面"></p>
-<p>到預設主題的設定檔：themes&gt;landscape&gt;_config.yml，增加超連結</p>
-<p>原本的畫面連結是<br><img src="/" alt="照片：預設的超連結選單"></p>
-<p>修改</p>
+<li><p><strong>新增獨立頁面</strong>：<code>hexo new page 頁面名稱（英文）</code>（出現在 <code>source/頁面名稱/</code>），並需至主題設定檔（如 <code>themes/landscape/_config.yml</code>）修改 <code>menu</code> 新增超連結：</p>
+</li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  Home: /</span><br><span class="line">  Archives: /archives</span><br><span class="line">  About: /about</span><br></pre></td></tr></table></figure>
 
-<p>修改後<br><img src="/" alt="照片：修改後的超連結選單"></p>
+<ul>
+<li><strong>設定個人網域</strong>：</li>
+</ul>
+<ol>
+<li><p>修改 <code>_config.yml</code> 第 16 行的 <code>url</code> 成你的個人網址。</p>
+</li>
+<li><p>在 <code>source/</code> 資料夾新增檔名為 <code>CNAME</code> 的檔案（不要有副檔名），裡面直接寫入網域名稱（不加 <code>https://</code> 或 <code>www</code>，最後建議換行）。</p>
+</li>
+</ol>
 <hr>
-<p>修改預設主題<br>先下載預設主題的框架：<code>git clone --depth 1 https://github.com/hexojs/hexo-theme-landscape themes/landscape</code><br><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-theme-landscape">https://github.com/hexojs/hexo-theme-landscape</a></p>
+<h2 id="知識小卡（Key-Takeaways）"><a href="#知識小卡（Key-Takeaways）" class="headerlink" title="知識小卡（Key Takeaways）"></a>知識小卡（Key Takeaways）</h2><blockquote>
+<p>部落格部署標準SOP：修改文章或設定 → <code>hexo clean</code> → <code>hexo generate</code> → <code>hexo deploy</code></p>
+</blockquote>
+<blockquote>
+<p>踩坑筆記與注意事項：<br><strong>部署語法格式</strong>：修改 <code>deploy:</code> 時，建議整段清空再貼上官方字串，以免縮排或原格式殘留造成部署報錯。<br><strong>自訂網域設定</strong>：自訂網域只需要修改 <code>_config.yml</code> 上方的 <code>url</code>，最下方的 <code># Deployment</code> 網址維持 GitHub 網址。</p>
+</blockquote>
 <hr>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/">hexo官網-文件</a><br>六角學院線上課程</p>
-<hr>
-<h2 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h2><hr>
+<h2 id="學習單（Lab-Sheet）"><a href="#學習單（Lab-Sheet）" class="headerlink" title="學習單（Lab Sheet）"></a>學習單（Lab Sheet）</h2><ol>
+<li><p>Hexo 屬於哪種類型的網站框架？<br>(1) 動態<br>(2) 靜態<br>(3) 擬態</p>
+</li>
+<li><p>想要設定自訂網域時，專屬的 <code>CNAME</code> 檔案應該存放在哪一個資料夾下，才不會在部署時被刪除？<br>(1) <code>public/</code><br>(2) <code>themes/</code><br>(3) <code>source/</code></p>
+</li>
+</ol>
 <details>
-<summary>學習單解答</summary>
-1. hexo是靜態？動態？擬態
-
+<summary>查看解答</summary>
+1. 靜態
+2. `source/`
 </details>
+
+<hr>
+<h3 id="相關文章"><a href="#相關文章" class="headerlink" title="相關文章"></a>相關文章</h3><ul>
+<li><a href="">Hexo網誌框架 | 套用客製化主題 (Themes)</a></li>
+</ul>
+<hr>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/">Hexo官方-文件</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-tw/docs/github-pages#%E4%B8%80%E9%8D%B5%E9%83%A8%E5%B1%AC">Hexo官方-一鍵部署</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.hexschool.com/">六角學院影音課程-Hexo部落格架站教學</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://buildnotes.aria-carrotlab.com/2026/10/07/hexo-001/" data-id="cuidivWrVjhSZ5JEFd_9JmcLW" data-title="Hexo網誌框架 | 架站" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://buildnotes.aria-carrotlab.com/2026/10/07/hexo-001/" data-id="cuidojWUwUx0N1VveuDmin9v0" data-title="Hexo網誌框架 | 建立個人靜態部落格與 GitHub Pages 部署" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" rel="tag">部落格</a></li></ul>
+
     </footer>
   </div>
   
@@ -325,7 +418,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://buildnotes.aria-carrotlab.com/2026/10/07/hello-world/" data-id="cuidaRoV_WDKV5xbQCXhaXBl6" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="http://buildnotes.aria-carrotlab.com/2026/10/07/hello-world/" data-id="cuidHBwyz1cQ9_x5goCEpAwWG" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -350,7 +443,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E8%A1%93%E5%AF%AB%E4%BD%9C/" rel="tag">技術寫作</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E8%A1%93%E5%AF%AB%E4%BD%9C/" rel="tag">技術寫作</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" rel="tag">部落格</a></li></ul>
     </div>
   </div>
 
@@ -360,7 +453,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">標籤雲</h3>
     <div class="widget tagcloud">
-      <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E6%8A%80%E8%A1%93%E5%AF%AB%E4%BD%9C/" style="font-size: 10px;">技術寫作</a>
+      <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">markdown</a> <a href="/tags/%E6%8A%80%E8%A1%93%E5%AF%AB%E4%BD%9C/" style="font-size: 10px;">技術寫作</a> <a href="/tags/%E9%83%A8%E8%90%BD%E6%A0%BC/" style="font-size: 20px;">部落格</a>
     </div>
   </div>
 
@@ -382,11 +475,15 @@
       <ul>
         
           <li>
-            <a href="/2026/10/08/md-001/">Markdown | 基礎語法</a>
+            <a href="/2026/10/09/md-001/">Markdown | 基礎語法</a>
           </li>
         
           <li>
-            <a href="/2026/10/07/hexo-001/">Hexo網誌框架 | 架站</a>
+            <a href="/2026/10/08/hexo-002/">Hexo網誌框架 | 套用客製化主題 (Themes)</a>
+          </li>
+        
+          <li>
+            <a href="/2026/10/07/hexo-001/">Hexo網誌框架 | 建立個人靜態部落格與 GitHub Pages 部署</a>
           </li>
         
           <li>
